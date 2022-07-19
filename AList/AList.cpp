@@ -64,7 +64,7 @@ void AList<T>::append(const T &itemToAppend)
 template <typename T>
 T AList<T>::remove()
 {
-    if ((curr < 0) || (listSize < curr))
+    if ((curr < 0) || (listSize < curr) || (listSize == 0))
     {
         std::cout << "Impossible to remove element, the AList is empty!" << std::endl;
         return (T)0;
