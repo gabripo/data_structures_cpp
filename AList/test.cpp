@@ -41,9 +41,17 @@ int main(int argc, char const *argv[])
 
     list.clear();
     list.remove();
+    list.print();
     std::cout << "List length: " << list.length() << std::endl;
     std::cout << "Current position: " << list.currentPos() << std::endl;
     std::cout << "Current value: " << list.getValue() << std::endl;
+
+    list.moveToPos(2);
+    list.insert(10);
+    list.insert(11);
+    list.insert(13);
+    list.moveToPos(2);
+    list.print();
 
     return 0;
 }
