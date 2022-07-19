@@ -39,5 +39,10 @@ int main(int argc, char const *argv[])
     list.prev();
     std::cout << "Current position: " << list.currentPos() << std::endl;
 
+    list.clear();
+    std::cout << "List length: " << list.length() << std::endl;
+    std::cout << "Current position: " << list.currentPos() << std::endl;
+    std::cout << "Current value: " << list.getValue() << std::endl;
+
     return 0;
 }
