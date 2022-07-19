@@ -99,6 +99,7 @@ void AList<T>::moveToEnd()
 template <typename T>
 void AList<T>::prev()
 {
+    std::cout << "Moving to the previous..." << std::endl;
     if (curr <= 0)
     {
         std::cout << "Impossible to move to previous: the current position in AList is at the head" << std::endl;
@@ -111,6 +112,7 @@ void AList<T>::prev()
 template <typename T>
 void AList<T>::next()
 {
+    std::cout << "Moving to the next..." << std::endl;
     if (curr == listSize - 1)
     {
         std::cout << "Impossible to move to the next: the current position in AList is at the tail" << std::endl;
