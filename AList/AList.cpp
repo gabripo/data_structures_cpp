@@ -149,10 +149,10 @@ void AList<T>::moveToPos(const int pos)
 template <typename T>
 const T &AList<T>::getValue() const
 {
-    if ((curr > listSize) || (curr < 0))
+    if ((curr > listSize) || (curr < 0) || (listSize == 0))
     {
-        std::cout << "Impossible to get current element: current position is bigger than the list size" << std::endl;
-        // return (T) 0;
+        std::cout << "Impossible to get current element: current position is invalid!" << std::endl;
+        return (T)0;
     }
     return listArray[curr];
 }
