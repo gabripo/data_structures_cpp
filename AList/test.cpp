@@ -31,5 +31,13 @@ int main(int argc, char const *argv[])
     std::cout << "List length: " << list.length() << std::endl;
     std::cout << "Current value: " << list.getValue() << std::endl;
 
+    list.moveToEnd();
+    list.next();
+    std::cout << "Current position: " << list.currentPos() << std::endl;
+
+    list.moveToStart();
+    list.prev();
+    std::cout << "Current position: " << list.currentPos() << std::endl;
+
     return 0;
 }
