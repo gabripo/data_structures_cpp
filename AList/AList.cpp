@@ -114,6 +114,7 @@ void AList<T>::next()
     if (curr == listSize - 1)
     {
         std::cout << "Impossible to move to the next: the current position in AList is at the tail" << std::endl;
+        return;
     }
     curr++;
 }
