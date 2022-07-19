@@ -164,6 +164,10 @@ void AList<T>::print() const
     std::cout << "Printing list: { ";
     for (int i = 0; i < listSize; i++)
     {
+        if (i == curr)
+        {
+            std::cout << "|";
+        }
         std::cout << listArray[i] << " ";
     }
     std::cout << "} with current position " << curr << std::endl;
