@@ -28,4 +28,6 @@ public:
     int currentPos() const;
     void moveToPos(const int pos);
     const T &getValue() const;
+
+    void print() const;
 };

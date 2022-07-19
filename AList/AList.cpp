@@ -57,6 +57,7 @@ void AList<T>::append(const T &itemToAppend)
     }
     listArray[listSize] = itemToAppend;
     listSize++;
+    std::cout << "Element appended at the tail " << std::endl;
 }
 
 // Theta(n) time
@@ -74,6 +75,7 @@ T AList<T>::remove()
         listArray[i] = listArray[i + 1];
     }
     listSize--;
+    std::cout << "Element removed at position " << curr << std::endl;
     return itemToReturn;
 }
 
@@ -81,6 +83,7 @@ T AList<T>::remove()
 template <typename T>
 void AList<T>::moveToStart()
 {
+    std::cout << "Moving to the start of AList..." << std::endl;
     curr = 0;
 }
 
@@ -88,6 +91,7 @@ void AList<T>::moveToStart()
 template <typename T>
 void AList<T>::moveToEnd()
 {
+    std::cout << "Moving to the end of AList..." << std::endl;
     curr = listSize - 1;
 }
 
@@ -137,6 +141,7 @@ void AList<T>::moveToPos(const int pos)
         std::cout << "Impossible to move to position " << pos << " in AList, as it is greater than list size " << listSize << std::endl;
         return;
     }
+    std::cout << "Moving to the position " << pos << " of AList..." << std::endl;
     curr = pos;
 }
 
@@ -150,4 +155,16 @@ const T &AList<T>::getValue() const
         // return (T) 0;
     }
     return listArray[curr];
+}
+
+// Theta(n) time
+template <typename T>
+void AList<T>::print() const
+{
+    std::cout << "Printing list: { ";
+    for (int i = 0; i < listSize; i++)
+    {
+        std::cout << listArray[i] << " ";
+    }
+    std::cout << "} with current position " << curr << std::endl;
 }
