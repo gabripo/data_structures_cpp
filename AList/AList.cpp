@@ -99,7 +99,7 @@ void AList<T>::moveToEnd()
 template <typename T>
 void AList<T>::prev()
 {
-    if (curr < 0)
+    if (curr <= 0)
     {
         std::cout << "Impossible to move to previous: the current position in AList is at the head" << std::endl;
         return;
