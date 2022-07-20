@@ -17,6 +17,20 @@ AList<T>::~AList()
     delete[] listArray;
 }
 
+template<typename T>
+AList<T>::AList(const AList& original)
+{
+    std::cout << "Copy constructor of AList called" << std::endl;
+    maxSize = original.maxSize;
+    listSize = original.listSize;
+    curr = original.curr;
+    listArray = new T[maxSize];
+    for (int i = 0; i < maxSize; i++)
+    {
+        listArray[i] = original.listArray[i];
+    }
+}
+
 // Theta(1) time
 template <typename T>
 void AList<T>::clear()

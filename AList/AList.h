@@ -9,12 +9,13 @@ class AList : public List<T>
 private:
     int maxSize;
     int listSize;
-    int curr;
+    int curr;   
     T *listArray;
 
 public:
     AList(const int size = defaultSize);
     virtual ~AList();
+    AList(const AList& original);
 
     void clear();
     void insert(const T &itemToInsert);
