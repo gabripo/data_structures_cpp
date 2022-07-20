@@ -14,7 +14,7 @@ private:
 
 public:
     AList(const int size = defaultSize);
-    ~AList();
+    virtual ~AList();
 
     void clear();
     void insert(const T &itemToInsert);
