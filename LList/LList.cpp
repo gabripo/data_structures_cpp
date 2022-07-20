@@ -151,10 +151,11 @@ template<typename T>
 int LList<T>::currentPos() const
 {
     Link<T>* tempLink = head;
-    int position;
-    while (curr != tempLink)
+    int position = 0;
+    while (curr == tempLink)
     {
         tempLink = tempLink->next;
+        position++;
     }
     return position;
 }
