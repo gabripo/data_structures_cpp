@@ -27,7 +27,7 @@ void LList<T>::init()
 template<typename T>
 void LList<T>::removeall()
 {
-    while (head != NULL)
+    while (head != nullptr)
     {
         curr = head;
         head = head->next;
@@ -73,7 +73,7 @@ void LList<T>::insert(const T& elementToInsert)
 template<typename T>
 void LList<T>::append(const T& elementToAppend)
 {
-    tail->next = new Link<T>(elementToAppend, NULL);
+    tail->next = new Link<T>(elementToAppend, nullptr);
     tail = tail->next;
     cnt++;
 }
@@ -82,7 +82,7 @@ void LList<T>::append(const T& elementToAppend)
 template<typename T>
 T LList<T>::remove()
 {
-    if (curr->next != NULL)
+    if (curr->next != nullptr)
     {
         T elementToReturn = curr->next->element;
         Link<T>* linkTempNode = curr->next;
@@ -180,7 +180,7 @@ void LList<T>::moveToPos(int pos)
 template<typename T>
 const T& LList<T>::getValue() const
 {
-    if (curr->next != NULL)
+    if (curr->next != nullptr)
     {
         return curr->next->element;
     }
