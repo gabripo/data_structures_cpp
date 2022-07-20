@@ -40,12 +40,17 @@ template<typename T>
 void LList<T>::print() const
 {
     std::cout << "Printing list: { ";
-    Link<T>* linkTempNode = head->next;
+    Link<T>* linkTempNode = head;
     int i = 0;
-    while ((linkTempNode != tail->next) && (i < cnt))
+    while ((linkTempNode->next != tail->next) && (i < cnt))
     {
-        std::cout << linkTempNode->element << " ";
+        if (linkTempNode == curr->next)
+        {
+            std::cout << "|";
+        }
+        std::cout << linkTempNode->next->element << " ";
         linkTempNode = linkTempNode->next;
+        i++;
     }
     std::cout << " }" << std::endl;
 }
