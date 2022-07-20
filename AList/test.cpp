@@ -84,5 +84,15 @@ int main(int argc, char const *argv[])
     std::cout << "Current position (list2): " << list2.currentPos() << std::endl;
     std::cout << "Current value (list2): " << list2.getValue() << std::endl;
     std::cout << "-----------" << std::endl;
+
+    AList<int> list3;
+    list.insert(100);
+    list3 = list;
+    list3.print();
+    std::cout << "List length (list3): " << list2.length() << std::endl;
+    std::cout << "Current position (list3): " << list2.currentPos() << std::endl;
+    std::cout << "Current value (list3): " << list2.getValue() << std::endl;
+    std::cout << "-----------" << std::endl;
+
     return 0;
 }
