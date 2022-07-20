@@ -18,6 +18,8 @@ void LList<T>::init()
     curr = new Link<T>;
     tail = new Link<T>;
     head = new Link<T>;
+    curr = head;
+    tail = head;
     cnt = 0;
 }
 
