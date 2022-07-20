@@ -31,6 +31,25 @@ AList<T>::AList(const AList& original)
     }
 }
 
+template<typename T>
+AList<T>& AList<T>::operator=(const AList& rhs)
+{
+    if (this != &rhs)
+    {
+        std::cout << "Assignment operator of AList called" << std::endl;
+        delete[] listArray;
+        maxSize = rhs.maxSize;
+        listSize = rhs.listSize;
+        curr = rhs.curr;
+        listArray = new T[maxSize];
+        for (int i = 0; i < maxSize; i++)
+        {
+            listArray[i] = rhs.listArray[i];
+        }
+    }
+    return *this;
+}
+
 // Theta(1) time
 template <typename T>
 void AList<T>::clear()
