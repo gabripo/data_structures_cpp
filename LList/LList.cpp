@@ -60,7 +60,7 @@ template<typename T>
 void LList<T>::insert(const T& elementToInsert)
 {
     curr->next = new Link<T>(elementToInsert, curr->next);
-    if (tail = curr)
+    if (tail == curr)
     {
         tail = curr->next;
     }
@@ -93,6 +93,10 @@ T LList<T>::remove()
         cnt--;
         return elementToReturn;
     }
+    else
+    {
+        return (T)0;
+    }
 }
 
 // Theta(1) time
@@ -113,7 +117,7 @@ void LList<T>::moveToEnd()
 template<typename T>
 void LList<T>::prev()
 {
-    if (curr = head)
+    if (curr == head)
     {
         return;
     }
@@ -176,5 +180,9 @@ const T& LList<T>::getValue() const
     if (curr->next != NULL)
     {
         return curr->next->element;
+    }
+    else
+    {
+        return (T)0;
     }
 }
