@@ -157,7 +157,7 @@ int LList<T>::currentPos() const
 {
     Link<T>* tempLink = head;
     int position = 0;
-    while (curr == tempLink)
+    while ((curr == tempLink) && (position < cnt))
     {
         tempLink = tempLink->next;
         position++;
