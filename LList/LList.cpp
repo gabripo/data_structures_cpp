@@ -110,6 +110,7 @@ T LList<T>::remove()
 template<typename T>
 void LList<T>::moveToStart()
 {
+    std::cout << "Moving to the start of LList..." << std::endl;
     curr = head;
 }
 
@@ -117,6 +118,7 @@ void LList<T>::moveToStart()
 template<typename T>
 void LList<T>::moveToEnd()
 {
+    std::cout << "Moving to the end of LList..." << std::endl;
     curr = tail;
 }
 
