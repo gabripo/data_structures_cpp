@@ -3,12 +3,14 @@
 template<typename T>
 LList<T>::LList(int size)
 {
+    std::cout << "Constructor of LList called..." << std::endl;
     init();
 }
 
 template<typename T>
 LList<T>::~LList()
 {
+    std::cout << "Destructor of LList called..." << std::endl;
     removeall();
 }
 
