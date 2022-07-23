@@ -193,6 +193,7 @@ const T& LList<T>::getValue() const
     }
     else
     {
+        std::cout << "Impossible to get value!" << std::endl;
         return (T)0;
     }
 }
