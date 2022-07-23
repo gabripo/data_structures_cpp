@@ -48,15 +48,11 @@ void LList<T>::print() const
         {
             std::cout << "|";
         }
-        std::cout << linkTempNode->next->element;
-        if (linkTempNode->next != tail)
-        {
-            std::cout << " ";
-        }
+        std::cout << linkTempNode->next->element << " ";
         linkTempNode = linkTempNode->next;
         i++;
     }
-    std::cout << " }" << std::endl;
+    std::cout << "}" << std::endl;
 }
 
 template<typename T>
