@@ -44,11 +44,12 @@ void LList<T>::print() const
     int i = 0;
     while ((linkTempNode->next != tail->next) && (i < cnt))
     {
-        if ((linkTempNode == curr->next) || ((curr == tail) && (linkTempNode->next == tail)))
+        std::cout << linkTempNode->next->element;
+        if ((linkTempNode == curr) || ((curr == tail) && (linkTempNode->next == tail)))
         {
             std::cout << "|";
         }
-        std::cout << linkTempNode->next->element << " ";
+        std::cout << " ";
         linkTempNode = linkTempNode->next;
         i++;
     }
