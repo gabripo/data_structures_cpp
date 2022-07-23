@@ -48,7 +48,11 @@ void LList<T>::print() const
         {
             std::cout << "|";
         }
-        std::cout << linkTempNode->next->element << " ";
+        std::cout << linkTempNode->next->element;
+        if (linkTempNode->next != tail)
+        {
+            std::cout << " ";
+        }
         linkTempNode = linkTempNode->next;
         i++;
     }
