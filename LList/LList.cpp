@@ -192,6 +192,10 @@ const T& LList<T>::getValue() const
     {
         return curr->next->element;
     }
+    else if (curr == tail)
+    {
+        return curr->element;
+    }
     else
     {
         std::cout << "Impossible to get value!" << std::endl;
