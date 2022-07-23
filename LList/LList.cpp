@@ -53,7 +53,15 @@ void LList<T>::print() const
         linkTempNode = linkTempNode->next;
         i++;
     }
-    std::cout << "}" << std::endl;
+    if (curr == tail)
+    {
+        std::cout << "|}" << std::endl;
+    }
+    else
+    {
+        std::cout << "}" << std::endl;
+    }
+    
 }
 
 template<typename T>
