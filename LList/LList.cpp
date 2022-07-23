@@ -39,16 +39,16 @@ void LList<T>::removeall()
 template<typename T>
 void LList<T>::print() const
 {
-    std::cout << "Printing list: { ";
+    std::cout << "Printing list: { head ";
     Link<T>* linkTempNode = head;
     int i = 0;
     while ((linkTempNode->next != tail->next) && (i < cnt))
     {
-        std::cout << linkTempNode->next->element;
-        if ((linkTempNode == curr) || ((curr == tail) && (linkTempNode->next == tail)))
+        if (linkTempNode == curr)
         {
             std::cout << "|";
         }
+        std::cout << linkTempNode->next->element;
         std::cout << " ";
         linkTempNode = linkTempNode->next;
         i++;
@@ -162,7 +162,7 @@ int LList<T>::currentPos() const
 {
     Link<T>* tempLink = head;
     int position = 0;
-    while (curr != tempLink)
+    while ((curr != tempLink) && (position < cnt))
     {
         tempLink = tempLink->next;
         position++;
