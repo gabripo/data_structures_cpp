@@ -1,4 +1,5 @@
 #include "AList.h"
+#include <stdexcept>
 
 template <typename T>
 AList<T>::AList(const int size)
@@ -100,7 +101,7 @@ T AList<T>::remove()
     if ((curr < 0) || (listSize < curr) || (listSize == 0))
     {
         std::cout << "Impossible to remove element, the AList is empty!" << std::endl;
-        return (T)0;
+        throw std::invalid_argument("Empty list");
     }
     T itemToReturn = listArray[curr];
     for (int i = curr; i < listSize - 1; i++)
@@ -188,7 +189,7 @@ const T &AList<T>::getValue() const
     if ((curr > listSize) || (curr < 0) || (listSize == 0))
     {
         std::cout << "Impossible to get current element: current position is invalid!" << std::endl;
-        return (T)0;
+        throw std::invalid_argument("Invalid position");
     }
     return listArray[curr];
 }
