@@ -1,25 +1,21 @@
-// FIFO (first-in, first-out) implementation of queue
-#include <iostream>
+#ifndef CUSTOM_QUEUE
+#define CUSTOM_QUEUE
 
-template <typename T>
+template<typename T>
 class Queue
 {
     private:
-        size_t size;
-        T* data;
+        void operator=(const Queue&);
+        Queue(const Queue&);
     public:
         Queue();
-        Queue(size_t input_size);
-        Queue(const Queue& original); // Copy constructor
-        Queue<T>& operator=(const Queue<T>& rhs); // Assignment operator
+        virtual ~Queue();
 
-        T front();
-        T rear();
-        bool empty();
-        void enqueue(T elementToEnqueue);
-        T dequeue();
-        size_t getSize();
-        void print();
-
-        ~Queue();
+        virtual void clear() = 0;
+        virtual void enqueue() = 0;
+        virtual void dequeue() = 0;
+        virtual const T& frontValue() = 0;
+        virtual int length() const = 0;
 };
+
+#endif
