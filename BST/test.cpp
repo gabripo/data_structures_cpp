@@ -16,6 +16,11 @@ int main(int argc, char const *argv[])
 
     bst.remove('b');
     bst.print();
+    std::cout << "-------" << std::endl;
+
+    bst.remove('a');
+    bst.print();
+    std::cout << "-------" << std::endl;
 
     return 0;
 }

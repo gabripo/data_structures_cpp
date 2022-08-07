@@ -213,6 +213,6 @@ void BST<Key, T>::printFromNodeToLevel(BSTNode<Key, T>* startingNode, int level)
     {
         std::cout << "  ";
     }
-    std::cout << startingNode->key() << std::endl;
+    std::cout << startingNode->key() << "(" << startingNode->element() << ")" << std::endl;
     printFromNodeToLevel(startingNode->right(), level+1);
 }
