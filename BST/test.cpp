@@ -10,10 +10,10 @@ int main(int argc, char const *argv[])
 
     bst.insert('a', 10);
     bst.insert('b', 100);
+    bst.insert('c', 20);
     bst.print();
     std::cout << "-------" << std::endl;
 
-    bst.insert('c', 20);
     bst.remove('b');
     bst.print();
 

@@ -103,11 +103,11 @@ T BST<Key, T>::findElementByKey(BSTNode<Key, T>* startingNode, const Key& keyToF
     }
     if (keyToFind < startingNode->key())
     {
-        return findElementByKey(startingNode->right(), keyToFind);
-    }
-    else if (keyToFind >= startingNode->key())
-    {
         return findElementByKey(startingNode->left(), keyToFind);
+    }
+    else if (keyToFind > startingNode->key())
+    {
+        return findElementByKey(startingNode->right(), keyToFind);
     }
     else
     {
@@ -126,7 +126,7 @@ BSTNode<Key, T>* BST<Key, T>::removeNodeByKey(BSTNode<Key, T>* startingNode, con
     {
         startingNode->setLeft(removeNodeByKey(startingNode->left(), keyToRemove));
     }
-    else if (keyToRemove >= startingNode->key())
+    else if (keyToRemove > startingNode->key())
     {
         startingNode->setRight(removeNodeByKey(startingNode->right(), keyToRemove));
     }
@@ -151,8 +151,8 @@ BSTNode<Key, T>* BST<Key, T>::removeNodeByKey(BSTNode<Key, T>* startingNode, con
             startingNode->setRight(deleteMinChild(startingNode->right()));
             delete nodeToRemove;
         }
-        return startingNode;
-    }   
+    }
+    return startingNode;
 }
 
 template<typename Key, typename T>
