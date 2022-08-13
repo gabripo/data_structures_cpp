@@ -6,6 +6,7 @@ class Heap {
         T* heapArray;
         int numElements;
         int maxSize;
+        void swap(T* array, int index1stElement, int index2ndElement);
         void siftdown(int nodePosition);
     public:
         Heap(T* inputArray, int inputNumElements, int inputMaxSize);

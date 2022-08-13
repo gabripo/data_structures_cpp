@@ -92,6 +92,13 @@ void Heap<T, Comparator>::insert(const T& elementToInsert) {
 }
 
 template<typename T, typename Comparator>
+void Heap<T, Comparator>::swap(T* array, int index1stElement, int index2ndElement) {
+    T temp = array[index1stElement];
+    array[index1stElement] = array[index2ndElement];
+    array[index2ndElement] = temp;
+}
+
+template<typename T, typename Comparator>
 bool Heap<T, Comparator>::isLeaf(int nodePosition) const {
     return ( (nodePosition >= numElements/2) && (nodePosition < numElements) );
 }
