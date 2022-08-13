@@ -1,5 +1,6 @@
 #include "Heap.cpp"
 #include "MaxOperator.cpp"
+#include "MinOperator.cpp"
 #include <iostream>
 
 const int maximumSize = 10;
@@ -11,6 +12,10 @@ int main(int argc, char const *argv[])
 
     Heap<int, MaxOperator<int> > maxHeap(array, arraySize, maximumSize);
     maxHeap.print();
+    std::cout << "----------------" << std::endl;
+
+    Heap<int, MinOperator<int> > minHeap(array, arraySize, maximumSize);
+    minHeap.print();
 
     return 0;
 }
