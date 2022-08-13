@@ -8,6 +8,7 @@ class Heap {
         int maxSize;
         void swap(T* array, int index1stElement, int index2ndElement);
         void siftdown(int nodePosition);
+        void printFromNodeToLevel(int startingNode, int level) const;
     public:
         Heap(T* inputArray, int inputNumElements, int inputMaxSize);
         
@@ -20,4 +21,5 @@ class Heap {
         void insert(const T& elementToInsert);
         T removeFirst();
         T remove(int positionToRemove);
+        void print() const;
 };

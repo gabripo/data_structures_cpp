@@ -122,3 +122,23 @@ template<typename T, typename Comparator>
 int Heap<T, Comparator>::size() const {
     return numElements;
 }
+
+template<typename T, typename Comparator>
+void Heap<T, Comparator>::print() const {
+    printFromNodeToLevel(0, 0);
+}
+
+template<typename T, typename Comparator>
+void Heap<T, Comparator>::printFromNodeToLevel(int startingNode, int level) const {
+    if (startingNode > numElements-1)
+    {
+        return;
+    }
+    printFromNodeToLevel(leftChild(startingNode), level+1);
+    for (int i = 0; i < level; i++)
+    {
+        std::cout << "  ";
+    }
+    std::cout << heapArray[startingNode] << std::endl;
+    printFromNodeToLevel(rightChild(startingNode), level+1);
+}
