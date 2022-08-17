@@ -22,7 +22,7 @@ T Heap<T, Comparator>::removeFirst() {
     {
         std::cout << "Heap is empty!" << std::endl;
     }
-    swap(heapArray, 0, numElements--);
+    swap(heapArray, 0, --numElements);
     if (numElements != 0)
     {
         siftdown(0);
