@@ -6,7 +6,7 @@ class Graph {
         Graph();
         virtual ~Graph();
 
-        virtual void init(int numVertices) = 0;
+        virtual void init(int inputNumVertices) = 0;
         virtual int getVertices() = 0;
         virtual int getEdges() = 0;
         virtual int getFirstNeighbour(int idxVertex) = 0;
