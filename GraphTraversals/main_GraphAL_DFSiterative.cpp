@@ -4,7 +4,6 @@
 
 void graphTraverse(Graph* G);
 void DFS(Graph* G, int idxVertex);
-void visitNode(Graph* G, int idxVertex);
 void PreVisit(Graph* G, int idxVertex);
 void PostVisit(Graph* G, int idxVertex);
 
@@ -75,6 +74,7 @@ void DFS(Graph* G, int idxVertex) {
         {
             continue;
         }
+        PreVisit(G, idxVertex);
         G->setMark(currentVertex, VISITED);
 
         for (int currentChild = G->getFirstNeighbour(currentVertex); currentChild != G->getVertices(); currentChild = G->getNextNeighbour(currentVertex, currentChild))
@@ -86,13 +86,8 @@ void DFS(Graph* G, int idxVertex) {
                 verticesStack.push(currentChild);
             }
         }
+        PostVisit(G, idxVertex);
     }
-}
-
-void visitNode(Graph* G, int idxVertex) {
-    PreVisit(G, idxVertex);
-    G->setMark(idxVertex, VISITED);
-    PostVisit(G, idxVertex);
 }
 
 void PreVisit(Graph* G, int idxVertex) {
