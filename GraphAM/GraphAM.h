@@ -1,6 +1,10 @@
 #include "../Graph/Graph.cpp"
 #include <iostream>
-#define UNVISITED 0
+
+enum vertexMarks {
+    UNVISITED,
+    VISITED,
+};
 
 // Adjacency Matrix representation for graphs
 class GraphAM : public Graph {

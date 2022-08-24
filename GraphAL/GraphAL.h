@@ -2,7 +2,11 @@
 #include "../List/List.cpp"
 #include "../LList/LList.cpp"
 #include "../Edge/Edge.cpp"
-#define UNVISITED 0
+
+enum vertexMarks {
+    UNVISITED,
+    VISITED,
+};
 
 // Adjacency List representation for graphs
 class GraphAL : public Graph {
