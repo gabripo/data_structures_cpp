@@ -1,3 +1,6 @@
+#ifndef EDGE
+#define EDGE
+
 class Edge {
     private:
         int idxPointedVertex;
@@ -9,3 +12,5 @@ class Edge {
         int getIdxPointedVertex();
         int getWeight();
 };
+
+#endif
