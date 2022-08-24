@@ -3,14 +3,14 @@
 template<typename T>
 LList<T>::LList(int size)
 {
-    std::cout << "Constructor of LList called..." << std::endl;
+    // std::cout << "Constructor of LList called..." << std::endl;
     init();
 }
 
 template<typename T>
 LList<T>::~LList()
 {
-    std::cout << "Destructor of LList called..." << std::endl;
+    // std::cout << "Destructor of LList called..." << std::endl;
     removeall();
 }
 
@@ -112,7 +112,7 @@ T LList<T>::remove()
 template<typename T>
 void LList<T>::moveToStart()
 {
-    std::cout << "Moving to the start of LList..." << std::endl;
+    // std::cout << "Moving to the start of LList..." << std::endl;
     curr = head;
 }
 
@@ -120,7 +120,7 @@ void LList<T>::moveToStart()
 template<typename T>
 void LList<T>::moveToEnd()
 {
-    std::cout << "Moving to the end of LList..." << std::endl;
+    // std::cout << "Moving to the end of LList..." << std::endl;
     curr = tail;
 }
 
