@@ -38,6 +38,8 @@ int main(int argc, char const *argv[])
         if (g.getMark(i) == UNVISITED)
         {
             std::cout << "Node " << i << " was not visited!" << std::endl;
+        } else if (g.getMark(i) == VISITED) {
+            std::cout << "Node " << i << " was visited. ;-)" << std::endl;
         }
     }
 
